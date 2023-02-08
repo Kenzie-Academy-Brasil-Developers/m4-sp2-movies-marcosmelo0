@@ -1,0 +1,9 @@
+CREATE DATABASE movies;
+
+CREATE TABLE IF NOT EXISTS movies(
+    id BIGSERIAL PRIMARY KEY,
+    name VARCHAR(50) UNIQUE NOT NULL,
+    description VARCHAR(50) NOT NULL,
+    duration INT NOT NULL,
+    price INT NOT NULL
+);
