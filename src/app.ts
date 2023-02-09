@@ -12,7 +12,7 @@ import { ensureMoviesExists } from "./middlewares";
 const app: Application = express();
 app.use(express.json());
 
-app.post("/movies", ensureMoviesExists, createMovie);
+app.post("/movies", createMovie);
 app.post("/movies", ensureMoviesExists, createMovieFormat);
 app.get("/movies", listMovies);
 app.delete("/movies/:id", ensureMoviesExists, deleteMovie);
